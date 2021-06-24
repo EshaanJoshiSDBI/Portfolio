@@ -3,7 +3,7 @@
 # Career objectives
 
 ### To earn a job in the field of finance which provides an environment of exponential growth, self-development and help me achieve organizational and personal goals.
-
+---
 # Projects
 <img src = 'maxim-hopman-fiXLQXAhCfk-unsplash.jpg'/>
 
@@ -43,7 +43,7 @@ Photo by <a href="https://unsplash.com/@octadan?utm_source=unsplash&utm_medium=r
 - 10th from Infant Jesus School
 	- SSC Board
 	- Completed in 2018
-
+---
 # Skills
 - Python.
 - R.
@@ -65,8 +65,24 @@ Photo by <a href="https://unsplash.com/@octadan?utm_source=unsplash&utm_medium=r
 - Learn new programming languages, currently learning Go.
 
 # Certificates
-<html>
-  <body>
-  <iframe src = 'https://www.guvi.in/verify-certificate?id=9464452GNb1D6Z1Wm0'> R programming certificate</iframe>
-  </body>
-</html>
+<figure>
+	<figcaption align = "center"><b> R programming</b></figcaption>
+	<img src = 'GuviCertification - 9464452GNb1D6Z1Wm0.png'/>
+</figure>
+<figure>
+	<figcaption align = 'center'><b> Making a face-recognition application using for the AI for INDIA event</b></figcaption>
+	<img src = 'GuviCertification - 5UpA57W53toz911062(2).png'/>
+</figure>
+<figure>
+	<figcaption align = 'center'><b>Python</b></figcaption>
+	<img src = 'Eshaan Joshi - Python.png'/>
+</figure>
+<figure>
+	<figcaption align = 'center'><b>Data Visualization</b></figcaption>
+	<img src = 'Eshaan Joshi - Data Visualization.png'/>
+</figure>
+
+# Contact
+- [email](mailto:eshaanjoshi713@gmail.com)
+- [github](https://github.com/EshaanJoshiSDBI)
+- [kaggle](https://www.kaggle.com/eshaanjoshi12)
