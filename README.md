@@ -1,6 +1,6 @@
-<h1 style = 'text-align:center;color:aqua'>Eshaan Joshi</h1>
+<h1 style = 'text-align:center'>Eshaan Joshi</h1>
 
-## BSc Data Science and Business Intelligence
+<h2 style = 'text-align:center'>BSc Data Science and Business Intelligence</h2>
 
 # Career objectives
 
