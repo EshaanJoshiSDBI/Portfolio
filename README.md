@@ -13,12 +13,14 @@
 <img src = 'maxim-hopman-fiXLQXAhCfk-unsplash.jpg'/>
 
 Photo by <a href="https://unsplash.com/@nampoh?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Maxim Hopman</a> on <a href="https://unsplash.com/s/photos/automation?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
-### This project fetches data from the yahoo finance website of the selected stock, plots a candlestick graph, an interactive graph, calculates the RSI and predicts the price using DecisionTree.
-
-- **Libraries used:** Pandas, Numpy, matplotlib, mplfinance, tkinter, re, datetime, plotly, sklearn.
-- **Input:** Ticket name, number of days to predict the price.
-- **Output:** CandleStick graph (static and interactive), attribute graph, graph for predicted graphs and RSI
+<h3>This project fetches data from the yahoo finance website of the selected stock, plots a candlestick graph, an interactive graph, calculates the RSI and predicts the price using DecisionTree.</h3>
+<p style = "color:black" title = "Stock market analysis">
+<ul>
+	<li><b>Libraries used:</b> Pandas, Numpy, matplotlib, mplfinance, tkinter, re, datetime, plotly, sklearn.</li>
+	<li><b>Input:</b> Ticket name, number of days to predict the price.</li>
+	<li><b>Output:</b> CandleStick graph (static and interactive), attribute graph, graph for predicted graphs and RSI</li>
+</ul>
+</p>
 
 ## [Project2: CryptoCurrency analysis](https://github.com/EshaanJoshiSDBI/cryptoanalysis)
 
@@ -26,50 +28,77 @@ Photo by <a href="https://unsplash.com/@nampoh?utm_source=unsplash&utm_medium=re
 
 Photo by <a href="https://unsplash.com/@jievani?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jievani Weerasinghe</a> on <a href="https://unsplash.com/s/photos/ethereum?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
-### This project uses the yahoo finance API to fetch data, neural network for predicting the prices and matplotlib for plotting the findings
-- **Libraries used:** Pandas, Pandas_datareader, Numpy, Matplotlib, datetime, sklearn, tensorflow.
-- **Input:** Ticker name of the cryptocurrency, currency to fetch the price for(USD, INR, etc.), number days to predict for
-- **Output:** plot for actual price and predicted price, predicted prices
+<h3>This project uses the yahoo finance API to fetch data, neural network for predicting the prices and matplotlib for plotting the findings.</h3>
+<p style = 'color:black' title='Cryptocurrency analysis'>
+<ul>
+	<li><b>Libraries used:</b> Pandas, Pandas_datareader, Numpy, Matplotlib, datetime, sklearn, tensorflow.</li>
+	<li><b>Input:</b> Ticker name of the cryptocurrency, currency to fetch the price for(USD, INR, etc.), number days to predict for.</li>
+	<li><b>Output:</b> plot for actual price and predicted price, predicted prices.</li>
+</ul>
+</p>
 
 ## [Other Projects](https://github.com/EshaanJoshiSDBI/Projects)
 <img src = 'octavian-dan-b21Ty33CqVs-unsplash.jpg' />
 
 Photo by <a href="https://unsplash.com/@octadan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Octavian Dan</a> on <a href="https://unsplash.com/s/photos/projects?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
-- Small projects like a minimal python code-editor, creating a dummy database and ER diagram for it using python, screen recorder and many more to come.
-
-# Qualifications
-- BSc Data Science and Business Intelligence from Chikitsak Samuha's S. S. & L. S. Patkar College of Arts & Science, and V. P. Varde College of Commerce & Economics.
-	- Duration - currently in 2nd year
-- 12th Science from Bombay Suburban Grain Dealer's Association College (also known as NL College)
-	- HSC Board, completed in 2020
-	- Subjects - Physics, Chemistry, Math, Computer Science
-- 10th from Infant Jesus School
-	- SSC Board, completed in 2018
+<p style = 'color:black' title = 'Other projects'>
+	<ul>
+		<li>Small projects like a minimal python code-editor, creating a dummy database and ER diagram for it using python, screen recorder and many more to come.</li>
+	</ul>
+</p>
+<h1>Qualifications</h1>
+<p style = 'color:black' title = 'Qualifications'>
+	<ul>
+		<li>BSc Data Science and Business Intelligence from Chikitsak Samuha's S. S. & L. S. Patkar College of Arts & Science, and V. P. Varde College of Commerce & Economics.</li>
+		<ul>
+			<li>- Duration - currently in 2nd year</li>
+		</ul>
+		<li>12th Science from Bombay Suburban Grain Dealer's Association College (also known as NL College).</li>
+		<ul>
+			<li>HSC Board, completed in 2020.</li>
+			<li>Subjects - Physics, Chemistry, Math, Computer Science.</li>
+		</ul>
+		<li>10th from Infant Jesus School.</li>
+			<ul>
+				<li>SSC Board, completed in 2018.</li>
+			</ul>
+	</ul>
+</p>	
 
 ---
 
 # Skills
-- Python.
-- R.
-- Golang.
-- Finance.
-- Data Analysis.
-- Logical & Critical thinking.
-- Working with VMs, Linux, git, etc.
+
+<p style = 'color:black' title = 'Skills'>
+<ul>
+	<li>Python.</li>
+	<li>R.</li>
+	<li>Golang.</li>
+	<li>Finance.</li>
+	<li>Data Analysis.</li>
+	<li>Logical & Critical thinking.</li>
+	<li>Working with VMs, Linux, git, etc.</li>
+</ul>
+</p>
 
 # Hobbies
-- Love working with Virtual Machines or Docker.
-- Digging deep into various technical stuff and being up to date.
-- Working in Linux gnu as much as possible.
-- Working with git for version control and collaboration.
-- Helping my friends, colleagues, everyone whenever possible.
-- Solving various sample questions of varying levels in Python, R, excel, etc.
-- Automating things I do regularly using python.
-- Learning about how stock markets work, how the finances of a company/country works and analyzing it.
-- Learn new programming languages, currently learning Go.
+
+<p style = 'color:black' title = 'Hobbies'>
+<ul>
+	<li>Love working with Virtual Machines or Docker.</li>
+	<li>Digging deep into various technical stuff and being up to date.</li>
+	<li>Working in Linux gnu as much as possible.</li>
+	<li>Working with git for version control and collaboration.</li>
+	<li>Helping my friends, colleagues, everyone whenever possible.</li>
+	<li>Solving various sample questions of varying levels in Python, R, excel, etc.</li>
+	<li>Automating things I do regularly using python.</li>
+	<li>Learning about how stock markets work, how the finances of a company/country works and analyzing it.</li>
+	<li>Learn new programming languages, currently learning Go.</li>
+</ul>
+</p>
 
 # Certificates
+
 <figure>
 	<figcaption align = "center"><b> R programming</b></figcaption>
 	<img src = 'GuviCertification - 9464452GNb1D6Z1Wm0.png'/>
