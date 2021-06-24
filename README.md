@@ -1,5 +1,7 @@
-# Eshaan Joshi
+<h1 style = 'text-align:center;color:aqua'>Eshaan Joshi</h1>
+
 ## BSc Data Science and Business Intelligence
+
 # Career objectives
 
 ### To earn a job in the field of finance which provides an environment of exponential growth, self-development and help me achieve organizational and personal goals.
