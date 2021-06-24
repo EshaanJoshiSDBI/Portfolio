@@ -86,3 +86,4 @@ Photo by <a href="https://unsplash.com/@octadan?utm_source=unsplash&utm_medium=r
 - [email](mailto:eshaanjoshi713@gmail.com)
 - [github](https://github.com/EshaanJoshiSDBI)
 - [kaggle](https://www.kaggle.com/eshaanjoshi12)
+- [LinkedIn](https://www.linkedin.com/in/eshaan-joshi-93b6711b6/)
