@@ -5,23 +5,25 @@
 ### To earn a job in the field of finance which provides an environment of exponential growth, self-development and help me achieve organizational and personal goals.
 ---
 # Projects
+
+## [Project1: Stock market analysis](https://github.com/EshaanJoshiSDBI/stockanalysis)
+
 <img src = 'maxim-hopman-fiXLQXAhCfk-unsplash.jpg'/>
 
 Photo by <a href="https://unsplash.com/@nampoh?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Maxim Hopman</a> on <a href="https://unsplash.com/s/photos/automation?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
-## [Project1: Stock market analysis](https://github.com/EshaanJoshiSDBI/stockanalysis)
 
 ### This project fetches data from the yahoo finance website of the selected stock, plots a candlestick graph, an interactive graph, calculates the RSI and predicts the price using DecisionTree.
 
 - **Libraries used:** Pandas, Numpy, matplotlib, mplfinance, tkinter, re, datetime, plotly, sklearn.
 - **Input:** Ticket name, number of days to predict the price.
 - **Output:** CandleStick graph (static and interactive), attribute graph, graph for predicted graphs and RSI
-<img src = 'jievani-weerasinghe-zHI7m_FxpMU-unsplash.jpg' />
-
-Photo by <a href="https://unsplash.com/@jievani?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jievani Weerasinghe</a> on <a href="https://unsplash.com/s/photos/ethereum?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 ## [Project2: CryptoCurrency analysis](https://github.com/EshaanJoshiSDBI/cryptoanalysis)
 ### This project uses the yahoo finance API to fetch data, neural network for predicting the prices and matplotlib for plotting the findings
+
+<img src = 'jievani-weerasinghe-zHI7m_FxpMU-unsplash.jpg' />
+
+Photo by <a href="https://unsplash.com/@jievani?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jievani Weerasinghe</a> on <a href="https://unsplash.com/s/photos/ethereum?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 - **Libraries used:** Pandas, Pandas_datareader, Numpy, Matplotlib, datetime, sklearn, tensorflow.
 - **Input:** Ticker name of the cryptocurrency, currency to fetch the price for(USD, INR, etc.), number days to predict for
