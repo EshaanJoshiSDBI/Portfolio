@@ -19,32 +19,31 @@ Photo by <a href="https://unsplash.com/@nampoh?utm_source=unsplash&utm_medium=re
 - **Output:** CandleStick graph (static and interactive), attribute graph, graph for predicted graphs and RSI
 
 ## [Project2: CryptoCurrency analysis](https://github.com/EshaanJoshiSDBI/cryptoanalysis)
-### This project uses the yahoo finance API to fetch data, neural network for predicting the prices and matplotlib for plotting the findings
 
 <img src = 'jievani-weerasinghe-zHI7m_FxpMU-unsplash.jpg' />
 
 Photo by <a href="https://unsplash.com/@jievani?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jievani Weerasinghe</a> on <a href="https://unsplash.com/s/photos/ethereum?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
+### This project uses the yahoo finance API to fetch data, neural network for predicting the prices and matplotlib for plotting the findings
 - **Libraries used:** Pandas, Pandas_datareader, Numpy, Matplotlib, datetime, sklearn, tensorflow.
 - **Input:** Ticker name of the cryptocurrency, currency to fetch the price for(USD, INR, etc.), number days to predict for
 - **Output:** plot for actual price and predicted price, predicted prices
+
+## [Other Projects](https://github.com/EshaanJoshiSDBI/Projects)
 <img src = 'octavian-dan-b21Ty33CqVs-unsplash.jpg' />
 
 Photo by <a href="https://unsplash.com/@octadan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Octavian Dan</a> on <a href="https://unsplash.com/s/photos/projects?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
-##[Other Projects](https://github.com/EshaanJoshiSDBI/Projects)
 - Small projects like a minimal python code-editor, creating a dummy database and ER diagram for it using python, screen recorder and many more to come.
 
 # Qualifications
 - BSc Data Science and Business Intelligence from Chikitsak Samuha's S. S. & L. S. Patkar College of Arts & Science, and V. P. Varde College of Commerce & Economics.
 	- Duration - currently in 2nd year
 - 12th Science from Bombay Suburban Grain Dealer's Association College (also known as NL College)
-	- HSC Board
-	- Completed in 2020
+	- HSC Board, completed in 2020
 	- Subjects - Physics, Chemistry, Math, Computer Science
 - 10th from Infant Jesus School
-	- SSC Board
-	- Completed in 2018
+	- SSC Board, completed in 2018
 
 ---
 
