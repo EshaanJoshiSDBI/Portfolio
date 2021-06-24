@@ -43,7 +43,9 @@ Photo by <a href="https://unsplash.com/@octadan?utm_source=unsplash&utm_medium=r
 - 10th from Infant Jesus School
 	- SSC Board
 	- Completed in 2018
+
 ---
+
 # Skills
 - Python.
 - R.
