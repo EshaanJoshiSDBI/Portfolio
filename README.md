@@ -8,12 +8,13 @@
 ---
 # Projects
 
-## [Project1: Stock market analysis](https://github.com/EshaanJoshiSDBI/stockanalysis)
+## [Project1: Stock market analytics](https://github.com/EshaanJoshiSDBI/stockanalysis)
 
 <img src = 'maxim-hopman-fiXLQXAhCfk-unsplash.jpg'/>
 
 Photo by <a href="https://unsplash.com/@nampoh?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Maxim Hopman</a> on <a href="https://unsplash.com/s/photos/automation?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 <h3>This project fetches data from the yahoo finance website of the selected stock, plots a candlestick graph, an interactive graph, calculates the RSI and predicts the price using DecisionTree.</h3>
+<h4>Both the analysis and analytics of the stock market are done here</h4>
 <p style = "color:black" title = "Stock market analysis">
 <ul>
 	<li><b>Libraries used:</b> Pandas, Numpy, matplotlib, mplfinance, tkinter, re, datetime, plotly, sklearn.</li>
@@ -22,7 +23,7 @@ Photo by <a href="https://unsplash.com/@nampoh?utm_source=unsplash&utm_medium=re
 </ul>
 </p>
 
-## [Project2: CryptoCurrency analysis](https://github.com/EshaanJoshiSDBI/cryptoanalysis)
+## [Project2: CryptoCurrency analytics](https://github.com/EshaanJoshiSDBI/cryptoanalysis)
 
 <img src = 'jievani-weerasinghe-zHI7m_FxpMU-unsplash.jpg' />
 
