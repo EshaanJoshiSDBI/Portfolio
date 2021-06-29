@@ -45,6 +45,7 @@ Photo by <a href="https://unsplash.com/@octadan?utm_source=unsplash&utm_medium=r
 <p style = 'color:black' title = 'Other projects'>
 	<ul>
 		<li>Small projects like a minimal python code-editor, creating a dummy database and ER diagram for it using python, screen recorder, automating the login process(web scrapping) and many more to come.</li>
+		<li> Started making discord bots for various purpose, my first bot sends(embeds) news for a topic given to it in the chat using the googlenewsapi, I'll be making more bots in the coming future so stay tune</li>
 	</ul>
 </p>
 <h1>Qualifications</h1>
