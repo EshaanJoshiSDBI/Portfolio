@@ -44,7 +44,7 @@ Photo by <a href="https://unsplash.com/@jievani?utm_source=unsplash&utm_medium=r
 Photo by <a href="https://unsplash.com/@octadan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Octavian Dan</a> on <a href="https://unsplash.com/s/photos/projects?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 <p style = 'color:black' title = 'Other projects'>
 	<ul>
-		<li>Small projects like a minimal python code-editor, creating a dummy database and ER diagram for it using python, screen recorder and many more to come.</li>
+		<li>Small projects like a minimal python code-editor, creating a dummy database and ER diagram for it using python, screen recorder, automating the login process(web scrapping) and many more to come.</li>
 	</ul>
 </p>
 <h1>Qualifications</h1>
@@ -94,7 +94,7 @@ Photo by <a href="https://unsplash.com/@octadan?utm_source=unsplash&utm_medium=r
 	<li>Solving various sample questions of varying levels in Python, R, excel, etc.</li>
 	<li>Automating things I do regularly using python.</li>
 	<li>Learning about how stock markets work, how the finances of a company/country works and analyzing it.</li>
-	<li>Learn new programming languages, currently learning Go.</li>
+	<li>Learn new programming languages, currently learning Go and Julia.</li>
 </ul>
 </p>
 
@@ -103,6 +103,10 @@ Photo by <a href="https://unsplash.com/@octadan?utm_source=unsplash&utm_medium=r
 <figure>
 	<figcaption align = "center"><b> R programming</b></figcaption>
 	<img src = 'GuviCertification - 9464452GNb1D6Z1Wm0.png'/>
+</figure>
+<figure>
+	<figcaption align = 'center'><b>Took part in Guiness World Record Event- Most users to take an online computer programming lesson in 24 hours</b></figcaption>
+	<img src = 'GuviCertification - 2d266X11hBG81x5928(1).png'/>
 </figure>
 <figure>
 	<figcaption align = 'center'><b> Making a face-recognition application using for the AI for INDIA event</b></figcaption>
@@ -116,8 +120,10 @@ Photo by <a href="https://unsplash.com/@octadan?utm_source=unsplash&utm_medium=r
 	<figcaption align = 'center'><b>Data Visualization</b></figcaption>
 	<img src = 'Eshaan Joshi - Data Visualization.png'/>
 </figure>
-<h3>Letter by CSIRD's Director</h3>
-
+<figure>
+	<figcaption align = 'center'><b>Letter by CSIRD's Director</b></figcaption>
+	<img src = 'Eshaan Joshi.png'/>
+</figure>
 
 <!--<object data = 'Eshaan Joshi(1).pdf' type = 'application/pdf'></object>-->
 
