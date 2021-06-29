@@ -42,7 +42,7 @@ Photo by <a href="https://unsplash.com/@jievani?utm_source=unsplash&utm_medium=r
 
 <img src = 'blog.png' />
 
-<a href = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.T1aaT9hJb489jXG-E0GQWAAAAA%26pid%3DApi&f=1>Source</a>
+<a href = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.T1aaT9hJb489jXG-E0GQWAAAAA%26pid%3DApi&f=1'>Source</a>
 
 <ul>
 <li>A very basic blogging site, to be hosted on github pages</li>
