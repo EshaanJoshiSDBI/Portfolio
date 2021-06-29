@@ -116,6 +116,10 @@ Photo by <a href="https://unsplash.com/@octadan?utm_source=unsplash&utm_medium=r
 	<figcaption align = 'center'><b>Data Visualization</b></figcaption>
 	<img src = 'Eshaan Joshi - Data Visualization.png'/>
 </figure>
+<h3>Letter by CSIRD's Director</h3>
+
+
+<!--<object data = 'Eshaan Joshi(1).pdf' type = 'application/pdf'></object>-->
 
 # Contact
 - [email](mailto:eshaanjoshi713@gmail.com)
