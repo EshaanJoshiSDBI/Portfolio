@@ -64,7 +64,8 @@ header p{
     opacity: 0.6;
 }
 .me{
-    height: 200px;
+    display: inline;
+    height: 75px;
 }
 
 /*parallax*/
