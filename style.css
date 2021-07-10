@@ -269,6 +269,16 @@ header p{
     top: 50%;
     transform: translate(-50%, -50%);
 }
+.grid_item:hover > .hidden_mobile{
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 .grid_item:hover img{
     filter: brightness(0.4);
     transform: scale(1.1);
