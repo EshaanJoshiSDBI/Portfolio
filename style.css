@@ -224,6 +224,9 @@ header p{
 .projects_title{
     font-size: 1.6rem;
 }
+.hidden{
+    display: none;
+}
 /* #work1{
     grid-area: work1;
 }
@@ -328,6 +331,9 @@ header p{
     .me{
         margin-left: 10rem;
         height: 500px;
+    }
+    .hidden_mobile{
+        display: none;
     }
 }
 @media (min-width: 1000px){
