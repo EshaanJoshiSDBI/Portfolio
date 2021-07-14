@@ -182,11 +182,11 @@ header p{
 }
 .grid_item{
     margin-bottom: 1rem;
-    padding: 1rem;
+    padding: 3rem;
     background: lightslategray;
     position: relative;
 }
-.grid_item img{
+/*.grid_item img{
     width: 100%;
     height: 100%;
 }
@@ -207,9 +207,9 @@ header p{
     filter: brightness(0.4);
     transform: scale(1.1);
     opacity: 0.95;
-}
+}*/
 /* Projects page */
-.projects_title{
+/* .projects_title{
     font-size: 1.6rem;
 }
 .hidden{
@@ -262,6 +262,15 @@ header p{
     transform: scale(1.1);
     opacity: 0.95;
 }
+/* new projects */
+/* .box{
+    width: 100px;
+    height: 20px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
 /* Contact */
 #contact{
     display: flex;
