@@ -271,6 +271,18 @@ header p{
     justify-content: center;
     align-items: center;
 } */
+.grid_item button{
+    border-radius: 12px;
+    opacity:0.5;
+    color: black;
+    border: 2px solid gray;
+    transition: 0.4s;
+}
+.grid_item button:hover{
+    background-color: grey;
+    color: white;
+    opacity: 1;
+}
 /* Contact */
 #contact{
     display: flex;
