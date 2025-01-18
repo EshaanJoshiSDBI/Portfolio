@@ -1,163 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eshaan Joshi | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="myScript.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eshaan Joshi | Data Science Consultant</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts (Roboto & Open Sans) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- AOS (Animate On Scroll) Library for Subtle Scroll Animations (Optional) -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.css"
+  />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="nav-menu">
-                <ul id="nav-list">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    &#9776;
-                </div>
-            </div>
-        </nav>
-        <div class="intro">
-            <p>Hi, I'm</p>
-            <h1>Eshaan Joshi</h1>
-            <p>A Data Scientist</p>
-        </div>
-    </header>    
+<body class="bg-gray-900 text-gray-200 font-['Open_Sans']">
+  <!-- ========== HEADER ========== -->
+  <header
+    id="header"
+    class="fixed w-full top-0 left-0 z-50 bg-gray-900 shadow-lg"
+  >
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <!-- Logo / Name -->
+      <div class="text-xl font-['Roboto'] font-bold tracking-wide">
+        <a href="#about">Eshaan Joshi</a>
+      </div>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I am Eshaan Joshi, A data Science and Analytics Enthusiast with hands on experience in data collection, cleaning, processing and analysis.
-            I have a strong interest in the financial industry particularly in understanding stock markets, company operations and predicting trends.
-            As an aspiring data scientist and business analyst, I am passionate about leveraging programming, statistics and domain expertise to drive insights
-            and decision making. With a solid foundation in Python, SQL and Machine learning, I enjoy tackling complex problems and delivering actionable insights
-            that help businesses succeed.</p>
-        <div class="resume-button-container">
-            <a href="EshaanJoshi_Resume.pdf" download="EshaanJoshi_Resume" class="resume-button">Download Resume</a>
-        </div>
-    </section>
+      <!-- Hamburger Menu Button (Mobile) -->
+      <button id="menu-btn" class="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-blue-400" aria-label="Toggle Menu">
+        <svg class="h-6 w-6 text-white" viewBox="0 0 24 24">
+          <path d="M4 5h16M4 12h16M4 19h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="experience-item">
-            <h3>Data Science Consultant - Smollan (Client: Google)</h3>
-            <p>Jul 2024 - Present (Remote)</p>
-            <p>Optimized internal chatbot performance, reducing run time and enhancing efficiency for the sales team.</p>
-            <p>Developed metrics and automated sales tracking and reporting with Python, generating weekly insights and alerts for underperforming stores reducing 60% weekly manual effort.</p>
-            <p>Built interactive dashboards in Looker studio and BigQuery to track KPIs and sales performance.</p>
-            <p>Created a python script to generate weekly performance insights, identifying factors driving sales growth and achievement targets.</p>
-            <p>Handled ad-hoc data requests from sales team, providing quick, actionable insights.</p>
-        </div>
-        <div class="experience-item"></div>
-            <h3>Data Analyst Intern - PharmEasy</h3>
-            <p>Jan 2023 - Jun 2023 (Remote)</p>
-            <p>Supported the customer retention team by generating insights from customer behavior data.</p>
-            <p>Developed automated reports (daily, weekly and monthly) using Hive, Python and Airflow to track key metrics.</p>
-            <p>Optimized data pipelines, improving processing times and report accuracy.</p>
-            <p>Handled adhoc queries from the business teams and provided data driven solutions.</p>
-        </div>
-        <div class="experience-item"></div>
-            <h3>Data Science Intern - Smollan (Client: Google)</h3>
-            <p>Apr 2022 - Jul 2022 (Remote)</p>
-            <p>Led the data management and visualization team for the Google project, creating and maintaining dashboards and reports.</p>
-            <p>Developed selenium based web scrapers to collect data from major retailers like Amazon, AT&T, MediaMarkt, BestBuy, etc.</p>
-        </div>
-        <div class="experience-item"></div>
-            <h3>Data Scientist Intern - Fittlyf</h3>
-            <p>Sep 2021 - Feb 2022 (Remote)</p>
-            <p>Experimented with and implemented Group Sequential A/B testing, created a sample size calculator using BigQuery, Python and Tableau.</p>
-            <p>Automated A/B testing and reporting, sending email updates with excel reports to analysts and executives.</p>
-            <p>Made the program fault-proof and created logs for execution.</p>
-            <p>Learning Risk assessment and the various methods, Multi Arm Bandit problems and Reinforcement learning.</p>
-            <p>Developed the Proof of Concept for risk assessment and built a credit risk model based on the Basel 2 Accord.</p>
-            <p>Forecasted KPI trends using XGBoost and Time Series analysis with both internal and external data (eg: Google Trends).</p>
-        </div>
-        <!-- Add more experiences as necessary -->
-    </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-item">
-            <h3>Credit Risk Scorecard</h3>
-            <p>Developed a risk scorecard model using Python and statistical methods to assess creditworthiness.</p>
-        </div>
-        <div class="project-item"></div>
-            <h3>Propensity Modeling</h3>
-            <p>Predicted customer behavior for insurance products using machine learning.</p>
-        </div>
-        <div class="project-item"></div>
-            <h3>Sentiment Analysis</h3>
-            <p>Analyzed tweet sentiments using NLP.</p>
-        </div>
-        <div class="project-item"></div>
-            <h3>Forage virtual internships</h3>
-            <p>KPMG AU, Quantium, British Airways.</p>
-        </div>
-        <!-- Add more projects -->
-    </section>
+      <!-- Navigation Links -->
+      <nav
+        id="menu"
+        class="hidden md:flex space-x-6 font-['Roboto'] text-sm"
+        aria-label="Main Menu"
+      >
+        <a
+          href="#about"
+          class="hover:text-teal-400 transition-colors"
+          >About</a
+        >
+        <a
+          href="#experience"
+          class="hover:text-teal-400 transition-colors"
+          >Experience</a
+        >
+        <a
+          href="#skills"
+          class="hover:text-teal-400 transition-colors"
+          >Skills</a
+        >
+        <a
+          href="#projects"
+          class="hover:text-teal-400 transition-colors"
+          >Projects</a
+        >
+        <a
+          href="#education"
+          class="hover:text-teal-400 transition-colors"
+          >Education</a
+        >
+        <a
+          href="#certifications"
+          class="hover:text-teal-400 transition-colors"
+          >Certifications</a
+        >
+        <a
+          href="#contact"
+          class="hover:text-teal-400 transition-colors"
+          >Contact</a
+        >
+      </nav>
+    </div>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul class="skills-list">
-            <li>Python</li>
-            <li>SQL</li>
-            <li>BigQuery</li>
-            <li>Looker Studio</li>
-            <li>R</li>
-            <li>MongoDB</li>
-            <li>Airflow</li>
-            <li>Docker</li>
-            <li>Linux</li>
-            <li>Excel</li>
-            <li>SAS</li>
-            <li>Power BI</li>
-            <li>AWS</li>
-            <li>Hadoop</li>
-            <li>Hive</li>
-            <li>Spark</li>
-            <li>Machine Learning</li>
-            <li>Deep Learning</li>
-            <li>LLM</li>
-            <li>NLP</li>
-            <li>A/B Testing</li>
-            <li>Financial Analytics</li>
-            <li>Propensity Modeling</li>
-            <li>Risk Assessment</li>
-            <li>Credit Risk Assessment</li>
-            <li>Time Series Analytics</li>
-            <li>Stochastic Modeling</li>
-            <li>Statistical Process Control</li>
-        </ul>
-    </section>
+    <!-- Mobile Navigation (Dropdown) -->
+    <div id="mobile-menu" class="bg-gray-900 hidden md:hidden">
+      <nav class="px-4 py-2 flex flex-col space-y-2 font-['Roboto'] text-sm">
+        <a href="#about" class="hover:text-teal-400 transition-colors">About</a>
+        <a href="#experience" class="hover:text-teal-400 transition-colors">Experience</a>
+        <a href="#skills" class="hover:text-teal-400 transition-colors">Skills</a>
+        <a href="#projects" class="hover:text-teal-400 transition-colors">Projects</a>
+        <a href="#education" class="hover:text-teal-400 transition-colors">Education</a>
+        <a href="#certifications" class="hover:text-teal-400 transition-colors">Certifications</a>
+        <a href="#contact" class="hover:text-teal-400 transition-colors">Contact</a>
+      </nav>
+    </div>
+    
+  </header>
+  <!-- ========== END HEADER ========== -->
 
-    <section id="education">
-        <h2>Education</h2> <!-- New Education Section -->
-        <div class="education-item">
-            <h3>MSc Statistics, SK Somaiya College</h3>
-            <p>2023 - 2025</p>
+  <!-- ========== ABOUT SECTION ========== -->
+  <section
+    id="about"
+    class="pt-24 pb-16 min-h-screen flex items-center justify-center relative overflow-hidden"
+  >
+    <!-- Subtle Background Graphic or Animation (Optional) -->
+    <div class="absolute inset-0 bg-cover bg-center opacity-10"
+      style="background-image: url('files/bg.webp');">
+    </div>
+
+    <div
+      class="relative max-w-3xl mx-auto text-center px-4"
+      data-aos="fade-up"
+    >
+      <h1 class="text-3xl md:text-5xl font-sans font-bold text-white">
+        Eshaan Joshi
+      </h1>
+      <p class="mt-2 text-lg md:text-xl text-gray-300">
+        Data Science Consultant | Turning data into insights
+      </p>
+      <p class="mt-4 text-gray-400">
+        Hello! I am Eshaan Joshi, A data Science and Analytics Enthusiast with hands on experience in data collection,
+        cleaning, processing and analysis. I have a strong interest in the financial industry particularly in understanding
+        stock markets, company operations and predicting trends. As an aspiring data scientist and business analyst, I am passionate about leveraging programming,
+        statistics and domain expertise to drive insights and decision making. With a solid foundation in Python, SQL and Machine learning, I enjoy tackling complex
+        problems and delivering actionable insights that help businesses succeed.
+      </p>
+      <!-- Download Resume Button -->
+      <a
+        href="files/EshaanJoshi_Resume.pdf"
+        download
+        class="inline-block mt-6 px-6 py-2 text-sm font-medium bg-teal-500 text-white rounded hover:bg-teal-400 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-400"
+      >
+        Download Resume
+      </a>
+    </div>
+  </section>
+  <!-- ========== END ABOUT SECTION ========== -->
+
+  <!-- ========== EXPERIENCE SECTION ========== -->
+  <section id="experience" class="py-16 px-4">
+    <div class="max-w-6xl mx-auto" data-aos="fade-up">
+      <h2 class="text-2xl md:text-3xl font-['Roboto'] font-bold mb-8">
+        Experience
+      </h2>
+      <div class="grid gap-8 md:grid-cols-2">
+        <!-- Smollan  2024 -->
+        <div class="bg-gray-800 p-6 rounded shadow hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-['Roboto'] font-bold text-teal-400">
+            Data Science Consultant
+          </h3>
+          <p class="text-gray-400">Smollan (Client: Google) | July 2024 - Present</p>
+          <ul class="mt-4 list-disc list-inside space-y-1 text-gray-300">
+            <li>Automated data summarization and sales correlation using Gemini API.</li>
+            <li>Integrated customer sentiment data query functionality into the internal sales analytics app.</li>
+            <li>Optimized internal sales analytics app performance, reducing runtime and improving efficiency.</li>
+            <li>Developed metrics and automated sales tracking and reporting with Python.</li>
+          </ul>
         </div>
-        <div class="education-item">
-            <h3>BSc Data Science & Business Analytics, Patkar Varde College</h3>
-            <p>2020 - 2023</p>
+
+        <!-- Pharmeasy -->
+        <div class="bg-gray-800 p-6 rounded shadow hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-['Roboto'] font-bold text-teal-400">
+            Data Analyst Intern
+          </h3>
+          <p class="text-gray-400">Pharmeasy | Jan 2023 - June 2023</p>
+          <ul class="mt-4 list-disc list-inside space-y-1 text-gray-300">
+            <li>Provided analytical insights for the customer retention team.</li>
+            <li>Automated reports using Hive, Python, Airflow, and Google Sheets for daily and weekly tracking.</li>
+            <li>Responded to ad-hoc inquiries from the business teams and optimized data pipelines.</li>
+          </ul>
         </div>
-    </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to reach out through my email: <a href="mailto:eshaanjoshi713@gmail.com">eshaanjoshi713@gmail.com</a></p>
-        <p>Or connect on <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></p>
-        <p>Github Profile: <a href="https://github.com/EshaanJoshiSDBI">EshaanJoshiSDBI</a></p>
-    </section>
+        <!-- Smollan 2022 -->
+        <div class="bg-gray-800 p-6 rounded shadow hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-['Roboto'] font-bold text-teal-400">
+            Data Science Intern
+          </h3>
+          <p class="text-gray-400">Smollan (Client: Google) | Apr 2022 - Jul 2022</p>
+          <ul class="mt-4 list-disc list-inside space-y-1 text-gray-300">
+            <li>Led the data management and visualization team for the Google project, creating and maintaining dashboards and reports.</li>
+            <li>Developed selenium based web scrapers to collect data from major retailers like Amazon, AT&T, Mediamarkt, Bestbuy, etc.</li>
+          </ul>
+        </div>
 
-    <footer>
-        <p>&copy; 2024 Eshaan Joshi. All rights reserved.</p>
-    </footer>
+        <!-- Fittlyf -->
+        <div class="bg-gray-800 p-6 rounded shadow hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-['Roboto'] font-bold text-teal-400">
+            Data Scientist Intern
+          </h3>
+          <p class="text-gray-400">Fittlyf | Sep 2021 - Feb 2022</p>
+          <ul class="mt-4 list-disc list-inside space-y-1 text-gray-300">
+            <li>Reduced time to read significance by 30% by introducing Group Sequential Sampling to A/B testing.</li>
+            <li>Automated experimentation, ETL and weekly reports using python.</li>
+            <li>Built proof of concept for risk assessment and credit risk.</li>
+            <li>Used time series forecasting to forecast KPIs using internal and external data.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ========== END EXPERIENCE SECTION ========== -->
 
+  <!-- ========== SKILLS SECTION ========== -->
+  <section id="skills" class="py-16 px-4 bg-gray-800">
+    <div class="max-w-6xl mx-auto" data-aos="fade-up">
+      <h2 class="text-2xl md:text-3xl font-['Roboto'] font-bold mb-8 text-teal-400">
+        Skills
+      </h2>
+      <p class="mb-4 text-gray-300">
+        Here are some of the technologies and tools I frequently work with:
+      </p>
+      <div class="flex flex-wrap gap-3 text-sm text-white">
+        <!-- List of Skills -->
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">Python</span>
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">SQL</span>
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">R</span>
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">Linux</span>
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">BigQuery</span>
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">MongoDB</span>
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">Docker</span>
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">AWS</span>
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">Hadoop</span>
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">Hive</span>
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">Power BI</span>
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">Looker Studio</span>
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">Google Data Studio</span>
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">SAS</span>
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">Machine Learning</span>
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">LLM</span>
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">AI</span>
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">NLP</span>
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">A/B Testing</span>
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">Financial Analytics</span>
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">Propensity Modeling</span>
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">Risk Assessment</span>
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">Credit Risk</span>
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">Time Series Analytics</span>
+        <span class="bg-gray-700 rounded-md px-3 py-1 transform transition duration-300 hover:scale-110 hover:bg-white hover:text-gray-900">Statistical Process Control</span>
+      </div>
+    </div>
+  </section>
+  <!-- ========== END SKILLS SECTION ========== -->
+
+  <!-- ========== PROJECTS SECTION ========== -->
+  <section id="projects" class="py-16 px-4">
+    <div class="max-w-6xl mx-auto" data-aos="fade-up">
+      <h2 class="text-2xl md:text-3xl font-['Roboto'] font-bold mb-8">
+        Projects
+      </h2>
+      <div class="grid gap-8 md:grid-cols-2">
+        <!-- Credit Risk Modeling -->
+        <div class="bg-gray-800 p-6 rounded shadow hover:shadow-lg transition-shadow">
+          <img
+            src="files/credit_risk_modeling.webp"
+            alt="Project Thumbnail"
+            class="rounded mb-4"
+          />
+          <h3 class="text-xl font-['Roboto'] font-bold text-teal-400">
+            Credit Risk Scorecard
+          </h3>
+          <p class="mt-2 text-gray-300">
+            Developed a statistical credit risk scorecard, enhancing creditworthiness assessments and delivering actionable insights for financial risk mitigation.
+          </p>
+          <p class="mt-2 text-gray-400 text-sm">
+            Tech Used: Python, Statistical Modeling, Risk Assessment
+          </p>
+          <a
+            href="https://github.com/EshaanJoshiSDBI/Projects/blob/main/Financial%20Analytics/Application%20Scorecard.ipynb"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block mt-4 px-4 py-2 bg-teal-500 text-white rounded hover:bg-teal-400 transition-colors"
+          >
+            View on GitHub
+          </a>
+        </div>
+        <!-- Propensity Modelling -->
+        <div class="bg-gray-800 p-6 rounded shadow hover:shadow-lg transition-shadow">
+          <img
+            src="files/propensity_modeling.webp"
+            alt="Project Thumbnail"
+            class="rounded mb-4"
+          />
+          <h3 class="text-xl font-['Roboto'] font-bold text-teal-400">
+            Propensity Modeling
+          </h3>
+          <p class="mt-2 text-gray-300">
+            Predicted customer behaviour towards insurance products using Machine Learning techniques to improve targeting accuracy and drive customer engagement.
+          </p>
+          <p class="mt-2 text-gray-400 text-sm">
+            Tech Used: Python, Statistical Modeling
+          </p>
+          <a
+            href="https://github.com/EshaanJoshiSDBI/Projects/blob/main/Financial%20Analytics/PropensityModel.ipynb"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block mt-4 px-4 py-2 bg-teal-500 text-white rounded hover:bg-teal-400 transition-colors"
+          >
+            View on GitHub
+          </a>
+        </div>
+        <!-- More project cards as needed -->
+      </div>
+    </div>
+  </section>
+  <!-- ========== END PROJECTS SECTION ========== -->
+
+  <!-- ========== EDUCATION SECTION ========== -->
+  <section id="education" class="py-16 px-4 bg-gray-800">
+    <div class="max-w-6xl mx-auto" data-aos="fade-up">
+      <h2 class="text-2xl md:text-3xl font-['Roboto'] font-bold mb-8 text-teal-400">
+        Education
+      </h2>
+      <ul class="space-y-4 text-gray-200">
+        <li>
+          <h3 class="font-['Roboto'] font-bold">MSc Statistics</h3>
+          <p class="text-sm text-gray-400">SK Somaiya College (2023-2025)</p>
+        </li>
+        <li>
+          <h3 class="font-['Roboto'] font-bold">BSc Data Science and Business Analytics</h3>
+          <p class="text-sm text-gray-400">Patkar Varde College (2020-2023)</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- ========== END EDUCATION SECTION ========== -->
+
+  <!-- ========== CERTIFICATIONS SECTION ========== -->
+  <section id="certifications" class="py-16 px-4">
+    <div class="max-w-6xl mx-auto" data-aos="fade-up">
+      <h2 class="text-2xl md:text-3xl font-['Roboto'] font-bold mb-8">
+        Certifications
+      </h2>
+      <ul class="list-disc list-inside text-gray-300">
+        <li>Udemy: Risk Assessment, Credit Risk Modeling, A/B Testing in Python.</li>
+        <li>Forage virtual Job simulations: KPMG AU, Quantium, British Airways.</li>
+        <!-- Add more as needed -->
+      </ul>
+    </div>
+  </section>
+  <!-- ========== END CERTIFICATIONS SECTION ========== -->
+
+  <!-- ========== CONTACT ME SECTION ========== -->
+  <section id="contact" class="py-16 px-4 bg-gray-800">
+    <div class="max-w-6xl mx-auto" data-aos="fade-up">
+      <h2 class="text-2xl md:text-3xl font-['Roboto'] font-bold mb-8 text-teal-400">
+        Contact Me
+      </h2>
+      <div class="mt-8 flex flex-wrap space-x-6 text-gray-200">
+        <a href="https://github.com/EshaanJoshiSDBI" target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 text-lg">GitHub</a>
+        <a href="https://www.linkedin.com/in/eshan-joshi-11/" target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 text-lg">LinkedIn</a>
+        <a href="https://www.kaggle.com/eshaanjoshi" target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 text-lg">Kaggle</a>
+        <a href="mailto:eshaanjoshi713@gmail.com" target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 text-lg">Gmail</a>
+        <!-- Add more social links as needed -->
+      </div>
+    </div>
+  </section>
+  <!-- ========== END CONTACT ME SECTION ========== -->
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="py-4 text-center bg-gray-900">
+    <p class="text-gray-500 text-sm">
+      &copy; <span id="year"></span> Eshaan Joshi. All rights reserved.
+    </p>
+  </footer>
+  <!-- ========== END FOOTER ========== -->
+
+  <!-- AOS Library JS (Optional for Scroll Animations) -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 200,
+    });
+  </script>
+
+  <!-- Custom JavaScript -->
+  <script src="scripts.js"></script>
 </body>
 </html>

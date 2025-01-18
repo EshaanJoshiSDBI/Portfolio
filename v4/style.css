@@ -1,0 +1,342 @@
+/* Global Styles */
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    margin-top: 80px;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Intro Section Styling */
+.intro {
+    margin-top: 100px; /* Ensure enough space from the fixed navbar */
+    text-align: center;
+    padding: 50px 20px;
+    /* background-color: #f8f9fa; Light background for contrast */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.intro h1 {
+    font-size: 3rem;
+    /* color: #333; */
+    color: white;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 1.3rem;
+    /* color: #555; */
+    color: white;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* .intro p::before {
+    content: '"';
+}
+
+.intro p::after {
+    content: '"';
+} */
+
+/* Header and Navigation */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #333, #555); /* Gradient background for modern look */
+    z-index: 1000;
+    padding: 15px 0; /* More padding for a spacious feel */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Increased spacing between nav items */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #ff9800; /* Accent color for hover effect */
+    color: white;
+}
+/* nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+} */
+
+/* Intro Section */
+.intro {
+    margin-top: 20px;
+}
+
+.intro h1 {
+    margin: 10px 0;
+    font-size: 2.5rem;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Section Styling */
+section {
+    padding: 15px 15px; /* Reduced padding */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Experience & Projects */
+.experience-item, .project-item, .education-item {
+    margin-bottom: 20px;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+}
+/* Hide the menu by default */
+#nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+/* Hamburger Menu - Hidden by Default */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    #nav-list {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+        color: white;
+    }
+
+    #nav-list.show {
+        display: flex; /* Show the nav-list when active */
+    }
+
+    #nav-list li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #555;
+    }
+
+    #nav-list li a {
+        color: white;
+        text-decoration: none;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 15px; /* Reduce gap for smaller screens */
+    }
+}
+/* Mobile (Up to 480px width) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .intro h1 {
+        font-size: 2rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 10px 10px;
+    }
+
+    .skills-list li {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+/* Tablet (481px to 768px width) */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .intro h1 {
+        font-size: 2.2rem;
+    }
+
+    section {
+        padding: 15px 15px;
+    }
+
+    .skills-list li {
+        margin: 4px;
+    }
+}
+
+/* Laptop (769px to 1200px width) */
+@media (min-width: 769px) and (max-width: 1200px) {
+    body {
+        font-size: 18px;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    .intro h1 {
+        font-size: 2.5rem;
+    }
+
+    section {
+        padding: 20px 15px;
+    }
+}
+
+/* Desktop (1201px and above) */
+@media (min-width: 1201px) {
+    body {
+        font-size: 20px;
+    }
+
+    nav ul {
+        gap: 25px;
+    }
+
+    .intro h1 {
+        font-size: 2.8rem;
+    }
+
+    section {
+        padding: 30px 20px;
+    }
+}
+
+.resume-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+.resume-button {
+    background-color: #333;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 2px solid #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.resume-button:hover {
+    background-color: white;
+    color: #333;
+}
