@@ -1,167 +1,190 @@
 // scripts.js
 
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
 // ======= THEME TOGGLE =======
 const root = document.documentElement;
 const themeToggle = document.getElementById('theme-toggle');
-const THEME_STORAGE_KEY = 'theme';
+const THEME_KEY = 'theme';
 
-const getStoredTheme = () => {
-  try {
-    return localStorage.getItem(THEME_STORAGE_KEY);
-  } catch (err) {
-    return null;
-  }
-};
-
-const storeTheme = (mode) => {
-  try {
-    localStorage.setItem(THEME_STORAGE_KEY, mode);
-  } catch (err) {
-    // Ignore write failures (e.g., private mode)
-  }
+const getTheme = () => {
+  try { return localStorage.getItem(THEME_KEY); } catch { return null; }
 };
 
 const applyTheme = (mode) => {
-  const isDark = mode === 'dark';
-  root.classList.toggle('dark', isDark);
+  root.classList.toggle('dark', mode === 'dark');
   if (themeToggle) {
-    themeToggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
-    const label = isDark ? 'Switch to light theme' : 'Switch to dark theme';
-    themeToggle.setAttribute('title', label);
-    themeToggle.setAttribute('aria-label', label);
+    themeToggle.setAttribute('aria-pressed', mode === 'dark' ? 'true' : 'false');
+    themeToggle.setAttribute('title', mode === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
   }
 };
 
-const initialiseTheme = () => {
-  const stored = getStoredTheme();
-  const initial = stored || 'dark';
-  applyTheme(initial);
-  if (!stored) {
-    storeTheme(initial);
-  }
+const setTheme = (mode) => {
+  applyTheme(mode);
+  try { localStorage.setItem(THEME_KEY, mode); } catch {}
 };
 
-initialiseTheme();
+applyTheme(getTheme() || 'dark');
 
 if (themeToggle) {
   themeToggle.addEventListener('click', () => {
-    const nextTheme = root.classList.contains('dark') ? 'light' : 'dark';
-    applyTheme(nextTheme);
-    storeTheme(nextTheme);
+    setTheme(root.classList.contains('dark') ? 'light' : 'dark');
   });
 }
 
-// ======= CURSOR-RESPONSIVE GLOW =======
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-const pageGlow = document.querySelector('.page-glow');
-const glowState = {
-  pointerActive: false,
-  handlersAttached: false,
-};
+// ======= SMOOTH ANCHOR SCROLL =======
+const easeInOutQuart = (t) =>
+  t < 0.5 ? 8 * t * t * t * t : 1 - Math.pow(-2 * t + 2, 4) / 2;
 
-const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
-const GLOW_Y_OFFSET = 48;
-
-const setGlowPosition = (x, y) => {
-  root.style.setProperty('--cursor-x', `${x}px`);
-  root.style.setProperty('--cursor-y', `${y}px`);
-};
-
-const primeGlowPosition = () => {
-  const heroSection = document.getElementById('about');
-  if (!heroSection) {
-    setGlowPosition(window.innerWidth * 0.6, window.innerHeight * 0.28 + GLOW_Y_OFFSET);
-    if (pageGlow) {
-      pageGlow.style.opacity = '0.9';
-    }
+const smoothScrollTo = (targetEl) => {
+  if (reduceMotion.matches) {
+    targetEl.scrollIntoView({ behavior: 'auto', block: 'start' });
     return;
   }
-  const rect = heroSection.getBoundingClientRect();
-  const baselineX = rect.left + rect.width * 0.58;
-  const baselineY = rect.top + rect.height * 0.32 + GLOW_Y_OFFSET;
-  setGlowPosition(baselineX, baselineY);
-  if (pageGlow) {
-    pageGlow.style.opacity = '0.9';
-  }
-};
 
-const handlePointerMove = (event) => {
-  if (event.pointerType && event.pointerType !== 'mouse') {
-    return;
-  }
-  glowState.pointerActive = true;
-  const x = clamp(event.clientX, 0, window.innerWidth);
-  const y = clamp(event.clientY + GLOW_Y_OFFSET, 0, window.innerHeight + 200);
-  setGlowPosition(x, y);
-  if (pageGlow) {
-    pageGlow.style.opacity = '1';
-  }
-};
+  const startY = window.scrollY;
+  const scrollOffset = parseFloat(getComputedStyle(targetEl).scrollMarginTop) || 0;
+  const targetY = targetEl.getBoundingClientRect().top + startY - scrollOffset;
+  const distance = targetY - startY;
 
-const handlePointerLeave = () => {
-  glowState.pointerActive = false;
-  primeGlowPosition();
-  if (pageGlow) {
-    pageGlow.style.opacity = '0.82';
-  }
-};
+  if (Math.abs(distance) < 2) return;
 
-const attachGlow = () => {
-  if (!pageGlow || glowState.handlersAttached) {
-    return;
-  }
-  glowState.handlersAttached = true;
-  primeGlowPosition();
-  window.addEventListener('pointermove', handlePointerMove);
-  window.addEventListener('pointerleave', handlePointerLeave);
-  window.addEventListener('blur', handlePointerLeave);
-};
+  const duration = Math.min(700, Math.max(350, Math.abs(distance) * 0.45));
+  const start = performance.now();
+  let cancelled = false;
 
-const detachGlow = () => {
-  if (!glowState.handlersAttached) {
-    return;
-  }
-  glowState.handlersAttached = false;
-  window.removeEventListener('pointermove', handlePointerMove);
-  window.removeEventListener('pointerleave', handlePointerLeave);
-  window.removeEventListener('blur', handlePointerLeave);
-};
+  const cancel = () => { cancelled = true; };
+  window.addEventListener('wheel', cancel, { passive: true, once: true });
+  window.addEventListener('touchmove', cancel, { passive: true, once: true });
 
-if (pageGlow) {
-  if (!prefersReducedMotion.matches) {
-    attachGlow();
-  } else {
-    primeGlowPosition();
-  }
-
-  const handleMotionPreferenceChange = (event) => {
-    if (event.matches) {
-      detachGlow();
-      primeGlowPosition();
-    } else {
-      attachGlow();
-    }
+  const step = (now) => {
+    if (cancelled) return;
+    const progress = Math.min((now - start) / duration, 1);
+    window.scrollTo(0, startY + distance * easeInOutQuart(progress));
+    if (progress < 1) requestAnimationFrame(step);
   };
 
-  if (typeof prefersReducedMotion.addEventListener === 'function') {
-    prefersReducedMotion.addEventListener('change', handleMotionPreferenceChange);
-  } else if (typeof prefersReducedMotion.addListener === 'function') {
-    prefersReducedMotion.addListener(handleMotionPreferenceChange);
+  requestAnimationFrame(step);
+};
+
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    const hash = link.getAttribute('href');
+    if (hash.length <= 1) return;
+    const targetEl = document.querySelector(hash);
+    if (!targetEl) return;
+    event.preventDefault();
+    smoothScrollTo(targetEl);
+    history.replaceState(null, '', hash);
+  });
+});
+
+// ======= SCROLL REVEAL =======
+const revealEls = document.querySelectorAll('[data-reveal]');
+
+if (reduceMotion.matches || !('IntersectionObserver' in window)) {
+  // Reduced motion or no IO support: show everything immediately.
+  revealEls.forEach(el => el.classList.add('revealed'));
+} else {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('revealed');
+      revealObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+  revealEls.forEach(el => revealObserver.observe(el));
+}
+
+// ======= STAT COUNTERS =======
+const counters = document.querySelectorAll('[data-count]');
+
+const runCounter = (el) => {
+  const target = parseInt(el.dataset.count, 10);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1400;
+  const start = performance.now();
+
+  const tick = (now) => {
+    const progress = Math.min((now - start) / duration, 1);
+    // easeOutExpo for a snappy-but-settled feel
+    const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+    el.textContent = Math.round(target * eased) + suffix;
+    if (progress < 1) requestAnimationFrame(tick);
+  };
+
+  requestAnimationFrame(tick);
+};
+
+if (counters.length) {
+  if (reduceMotion.matches || !('IntersectionObserver' in window)) {
+    counters.forEach(el => { el.textContent = el.dataset.count + (el.dataset.suffix || ''); });
+  } else {
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        runCounter(entry.target);
+        counterObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.6 });
+
+    counters.forEach(el => {
+      el.textContent = '0' + (el.dataset.suffix || '');
+      counterObserver.observe(el);
+    });
   }
 }
 
-// ======= MOBILE NAVIGATION =======
+// ======= TERMINAL TYPING =======
+const terminal = document.querySelector('.terminal-card');
+const typedEl = terminal?.querySelector('.js-typed');
+
+if (terminal && typedEl) {
+  if (reduceMotion.matches) {
+    terminal.classList.add('typed');
+  } else {
+    const caret = document.createElement('span');
+    caret.className = 'caret';
+    caret.setAttribute('aria-hidden', 'true');
+
+    const fullText = typedEl.textContent;
+
+    const startTyping = () => {
+      typedEl.textContent = '';
+      terminal.classList.add('typing');
+      typedEl.after(caret);
+
+      let i = 0;
+      const STEP_MS = 38;
+      const timer = setInterval(() => {
+        i += 1;
+        typedEl.textContent = fullText.slice(0, i);
+        if (i >= fullText.length) {
+          clearInterval(timer);
+          terminal.classList.add('typed');
+          setTimeout(() => terminal.classList.remove('typing'), 1400);
+        }
+      }, STEP_MS);
+    };
+
+    // Kick off after the headline has settled
+    setTimeout(startTyping, 650);
+  }
+}
+
+// ======= MOBILE MENU =======
 const menuBtn = document.getElementById('menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 
 if (menuBtn && mobileMenu) {
   menuBtn.addEventListener('click', () => {
-    const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
-    menuBtn.setAttribute('aria-expanded', (!isExpanded).toString());
+    const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+    menuBtn.setAttribute('aria-expanded', (!expanded).toString());
     mobileMenu.classList.toggle('hidden');
   });
 
-  mobileMenu.querySelectorAll('a').forEach((link) => {
+  mobileMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       mobileMenu.classList.add('hidden');
       menuBtn.setAttribute('aria-expanded', 'false');
@@ -176,15 +199,35 @@ if (menuBtn && mobileMenu) {
   });
 }
 
-// ======= DYNAMIC YEAR IN FOOTER =======
-const yearSpan = document.getElementById('year');
-if (yearSpan) {
-  yearSpan.textContent = new Date().getFullYear();
+// ======= HEADER SCROLL STATE =======
+const header = document.querySelector('.site-header');
+
+if (header) {
+  const onScroll = () => {
+    header.classList.toggle('scrolled', window.scrollY > 24);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 }
 
-/*
-  Additional enhancements can live here:
-  - Section intersection observers for active nav highlighting
-  - Theme toggle syncing with system preference changes
-  - Analytics or form handlers if needed
-*/
+// ======= DYNAMIC YEAR =======
+const yearSpan = document.getElementById('year');
+if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+// ======= ACTIVE NAV HIGHLIGHT =======
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.primary-nav a, .mobile-menu a');
+
+if (sections.length && navLinks.length) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+        });
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  sections.forEach(section => observer.observe(section));
+}
