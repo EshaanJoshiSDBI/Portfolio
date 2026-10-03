@@ -1,5 +1,5 @@
 /*
-  Eshaan Joshi — Portfolio
+  Eshaan Joshi - Portfolio
   Design system: Precision engineering + modern dev-tool aesthetic
   Fonts: Inter (body), JetBrains Mono (accents/labels)
   Colors: Deep charcoal dark mode, clean light mode. Single accent: teal-cyan.
@@ -88,7 +88,7 @@ img { max-width: 100%; display: block; }
 
 /* ============ SCROLL REVEAL SYSTEM ============ */
 /* Only applies when JS is enabled AND user hasn't reduced motion.
-   Everything visible by default — animations are progressive enhancement. */
+   Everything visible by default - animations are progressive enhancement. */
 
 @media (prefers-reduced-motion: no-preference) {
   html.js [data-reveal] {
@@ -171,7 +171,7 @@ img { max-width: 100%; display: block; }
   50%, 100% { opacity: 0; }
 }
 
-/* Terminal list cascade — gated so it's invisible only mid-typing */
+/* Terminal list cascade - gated so it's invisible only mid-typing */
 @media (prefers-reduced-motion: no-preference) {
   html.js .terminal-list li {
     opacity: 0;
@@ -422,7 +422,7 @@ html:not(.dark) .icon-btn .icon-moon { display: block; }
 
 /* ============ EXPERIENCE ============ */
 
-.timeline { display: flex; flex-direction: column; }
+.timeline { display: flex; flex-direction: column; gap: 1.75rem; }
 
 .timeline-item {
   display: flex; gap: 1.25rem; position: relative;
@@ -455,7 +455,7 @@ html:not(.dark) .icon-btn .icon-moon { display: block; }
 }
 
 .timeline-content {
-  flex: 1; padding-bottom: 2rem;
+  flex: 1;
   background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--radius-md); padding: 1.25rem 1.5rem;
   box-shadow: var(--shadow-sm);
@@ -489,7 +489,7 @@ html:not(.dark) .icon-btn .icon-moon { display: block; }
   color: var(--muted);
 }
 .timeline-list li { padding-left: 1rem; position: relative; }
-.timeline-list li::before { content: '—'; color: var(--accent); position: absolute; left: 0; font-size: 0.75rem; }
+.timeline-list li::before { content: '-'; color: var(--accent); position: absolute; left: 0; font-size: 0.75rem; }
 
 /* ============ SKILLS ============ */
 
